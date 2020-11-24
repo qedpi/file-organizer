@@ -13,6 +13,7 @@ Jimmy.Fallon
 James.Corden
 Samantha.Bee
 Daily.Show
+John.Oliver
 '''
 
 genres = {'comedy': COMEDY_TAGS}

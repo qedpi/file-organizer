@@ -17,7 +17,8 @@ for file_name in os.listdir(DOWNLOAD_DIR):
     # check single & double word combos todo: generalize to more than 2
     two_words = ('.'.join(name_parts[i:i + 2]) for i in range(len(name_parts) - 1))
     file_path = os.path.join(DOWNLOAD_DIR, file_name)
-
+    if os.path.isfile(file_path):  # skip files
+        continue
     # print(file_name, os.access(file_path, os.W_OK))  # todo: doesn't check if it's locked!
     # move files to corresponding dir
     try:
